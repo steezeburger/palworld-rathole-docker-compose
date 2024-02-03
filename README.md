@@ -22,11 +22,15 @@ just gen-rathole-configs
 
 ### Server
 
+The Rathole server will usually be run on a public server.
+
 ```bash
 just start-server
 ```
 
 ### Client
+
+The Rathole client will run on the same machine as your Palworld server.
 
 ```bash
 just start-client
