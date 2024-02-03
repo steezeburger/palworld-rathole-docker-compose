@@ -1,0 +1,19 @@
+# server.toml
+[server]
+bind_addr = "0.0.0.0:2333" # `2333` specifies the port that rathole listens for clients
+default_token = "$RATHOLE_TOKEN"
+
+[server.services.palworld]
+type = "udp"
+bind_addr = "0.0.0.0:8211"
+nodelay = true
+
+[server.services.palworld2]
+type = "udp"
+bind_addr = "0.0.0.0:27015"
+nodelay = true
+
+[server.services.foobar]
+type = "tcp"
+bind_addr = "0.0.0.0:8212"
+nodelay = true

@@ -1,0 +1,28 @@
+services:
+  palworld-rathole-server:
+    restart: unless-stopped
+    container_name: palworld-rathole-server
+    image: rapiz1/rathole
+    command: ["--server", "/app/server.toml"]
+    ports:
+      - 2333:2333  # for rathole communication
+      - 8211:8211/udp  # for palworld communication
+      - 27015:27015/udp  # for steam client communication
+    volumes:
+      - ./server.toml:/app/server.toml
+    env_file:
+      - .env
+
+  palworld-rathole-client:
+    restart: unless-stopped
+    container_name: palworld-rathole-client
+    image: rapiz1/rathole
+    command: ["--client", "/app/client.toml"]
+    ports:
+      - 2333:2333  # for rathole communication
+      - 8211/udp  # for palworld communication
+      - 27015/udp  # for steam client communication
+    volumes:
+      - ./client.toml:/app/client.toml
+    env_file:
+      - .env
