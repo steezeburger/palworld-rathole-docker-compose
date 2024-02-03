@@ -12,8 +12,3 @@ nodelay = true
 type = "udp"
 bind_addr = "0.0.0.0:27015"
 nodelay = true
-
-[server.services.foobar]
-type = "tcp"
-bind_addr = "0.0.0.0:8212"
-nodelay = true

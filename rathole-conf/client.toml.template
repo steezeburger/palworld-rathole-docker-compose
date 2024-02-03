@@ -13,6 +13,3 @@ nodelay = true
 local_addr = "127.0.0.2:27015"
 type = "udp"
 nodelay = true
-
-[client.services.foobar]
-local_addr = "127.0.0.1:8212"

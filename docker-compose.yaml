@@ -10,8 +10,6 @@ services:
       - 27015:27015/udp  # for steam client communication
     volumes:
       - ./rathole-conf/server.toml:/app/server.toml
-    env_file:
-      - .env
 
   palworld-rathole-client:
     restart: unless-stopped
@@ -24,5 +22,3 @@ services:
       - 27015/udp  # for steam client communication
     volumes:
       - ./rathole-conf/client.toml:/app/client.toml
-    env_file:
-      - .env
