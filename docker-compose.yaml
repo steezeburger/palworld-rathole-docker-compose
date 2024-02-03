@@ -9,7 +9,7 @@ services:
       - 8211:8211/udp  # for palworld communication
       - 27015:27015/udp  # for steam client communication
     volumes:
-      - ./server.toml:/app/server.toml
+      - ./rathole-conf/server.toml:/app/server.toml
     env_file:
       - .env
 
@@ -23,6 +23,6 @@ services:
       - 8211/udp  # for palworld communication
       - 27015/udp  # for steam client communication
     volumes:
-      - ./client.toml:/app/client.toml
+      - ./rathole-conf/client.toml:/app/client.toml
     env_file:
       - .env

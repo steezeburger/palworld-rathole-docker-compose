@@ -1,1 +1,6 @@
+# envars
 .env
+
+# generated confs
+rathole-conf/client.toml
+rathole-conf/server.toml
