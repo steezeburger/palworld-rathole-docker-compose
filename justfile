@@ -3,6 +3,10 @@ default:
 
 set dotenv-load
 
+# copies .env.example to .env
+gen-env:
+  cp .env.example .env
+
 # generate conf files from templates and .env
 gen-rathole-configs:
   envsubst < rathole-conf/client.toml.template > rathole-conf/client.toml
