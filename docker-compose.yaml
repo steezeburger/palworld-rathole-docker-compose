@@ -16,9 +16,6 @@ services:
     container_name: palworld-rathole-client
     image: rapiz1/rathole
     command: ["--client", "/app/client.toml"]
-    ports:
-      - 2333:2333  # for rathole communication
-      - 8211/udp  # for palworld communication
-      - 27015/udp  # for steam client communication
+    network_mode: host
     volumes:
       - ./rathole-conf/client.toml:/app/client.toml

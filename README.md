@@ -12,7 +12,7 @@ First, copy the example `.env.example` file to `.env` and fill in the required v
 * `RATHOLE_SERVER_ADDRESS` - the address where the Rathole server is running
 * `RATHOLE_TOKEN` - the token to use for Rathole server and client
 ```bash
-cp .env.example .env
+just gen-env
 ```
 
 Then generate the required config files from the templates and your `.env`

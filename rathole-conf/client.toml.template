@@ -5,11 +5,11 @@ default_token = "$RATHOLE_TOKEN"
 retry_interval = 1
 
 [client.services.palworld]
-local_addr = "127.0.0.2:8211"
+local_addr = "127.0.0.1:8211"
 type = "udp"
 nodelay = true
 
 [client.services.palworld2]
-local_addr = "127.0.0.2:27015"
+local_addr = "127.0.0.1:27015"
 type = "udp"
 nodelay = true
