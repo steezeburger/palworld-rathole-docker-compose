@@ -4,6 +4,13 @@ remote_addr = "$RATHOLE_SERVER_ADDRESS:2333" # The address of the server. The po
 default_token = "$RATHOLE_TOKEN"
 retry_interval = 1
 
+[client.transport] # The whole block is optional. Specify which transport to use
+type = "tcp" # Optional. Possible values: ["tcp", "tls", "noise"]. Default: "tcp"
+
+[client.transport.tcp]
+keepalive_secs = 5 # Optional. Specify `tcp_keepalive_time` in `tcp(7)`, if applicable. Default: 20 seconds
+keepalive_interval = 2 # Optional. Specify `tcp_keepalive_intvl` in `tcp(7)`, if applicable. Default: 8 seconds
+
 [client.services.palworld]
 local_addr = "127.0.0.1:8211"
 type = "udp"
